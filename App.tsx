@@ -11,6 +11,7 @@ export type Product = {
   image_url: string,
 };
 
+
 const App = () => {
   const [productList, setProductList] = useState([]);
 
