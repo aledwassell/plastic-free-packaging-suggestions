@@ -1,5 +1,5 @@
 import React from "react";
-import {ScrollView, Image, View, StyleSheet, Text} from 'react-native';
+import {Image, View, StyleSheet, Text} from 'react-native';
 
 import dimensions from '../constants/Layout';
 
@@ -11,7 +11,7 @@ type Props = {
 
 const ProductList = ({productList}: Props) => {    
     return(
-        <ScrollView style={styles.container}>
+        <View style={styles.container}>
             {productList.map((product, key) => (
                 <View key={key} style={styles.product}>
                     <Image 
@@ -23,7 +23,7 @@ const ProductList = ({productList}: Props) => {
                     </View>
                 </View>
             ))}
-        </ScrollView>
+        </View>
     );
 }
   
