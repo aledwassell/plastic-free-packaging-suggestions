@@ -17,7 +17,7 @@ const ProductList = ({productList}: Props) => {
                     <Image 
                         source={{uri: product.image_url}}
                         style={styles.image}></Image>
-                    <View>
+                    <View style={styles.productText}>
                         <Text style={styles.name}>Name: {product.name}</Text>
                         <Text style={styles.brand}>Brand: {product.brand_name}</Text>
                     </View>
@@ -34,6 +34,17 @@ const styles = StyleSheet.create({
         width: dimensions.window.width,
         padding: 5
     },
+    product: {
+        flexDirection: 'row'
+    },
+    image: {
+        width: 150,
+        height: 150
+    },
+    productText: {
+        justifyContent: 'center',
+        padding: 5,
+    },
     name: {
       fontSize: 20,
       fontWeight: 'bold',
@@ -41,11 +52,6 @@ const styles = StyleSheet.create({
     brand: {
         fontSize: 15,
     },
-    product: {
-        flexDirection: 'row'
-    },
-    image: {
-        width: 150,
-        height: 150
-    }
   });
+
+  

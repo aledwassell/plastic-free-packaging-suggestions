@@ -4,11 +4,12 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import {Product} from '../App';
 import colors from '../constants/Colors';
 
-type Props = {
-    currentProduct: Product,
+interface Props {
+    currentProduct: Product|null;
 };
 
-const CurrentProduct = ({currentProduct}: Props) => {
+const CurrentProduct: React.FC<Props> = ({currentProduct}) => {
+    if(!currentProduct) return <Text>No current product is available!</Text>;
     return (
         <View style={styles.container}>
             <Image 
